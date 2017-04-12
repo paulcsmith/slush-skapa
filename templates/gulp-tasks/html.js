@@ -15,7 +15,7 @@ gulp.task('html-dev', () => {
 	const hbStream = hb()
 		.partials('./src/html/partials/**/*.hbs')
 		.helpers('./src/html/helpers/*.js')
-		.data('./data/**/*.{js,json}')
+		.data('./src/data/**/*.{js,json}')
 		.data({timestamp: Date.now()})
 
 	return gulp.src(srcIndex)
@@ -31,7 +31,7 @@ gulp.task('html-prod', () => {
 	const hbStream = hb()
 		.partials('./src/html/partials/**/*.hbs')
 		.helpers('./src/html/helpers/*.js')
-		.data('./data/**/*.{js,json}')
+		.data('./src/data/**/*.{js,json}')
 		.data({timestamp: Date.now()})
 
 	return gulp.src(srcIndex)
