@@ -10,7 +10,7 @@ module.exports = function(error) {
 		title: 'Task failed [' + error.plugin + ']',
 		subtitle: 'Goddamnit, ' + name,
 		message: lineNumber + 'See terminal.',
-		icon: 'http://imgur.com/Pe2XIKC.png',
+		icon: 'imgur.com/Pe2XIKC.png',
 		sound: 'Sosumi'
 	}).write(error)
 
