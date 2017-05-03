@@ -21,11 +21,11 @@ gulp.task('ssh-prod', (cb) => {
 })
 
 const checkConfiguration = (username) => {
-	if (!config.path) {
+	if (!filepath) {
 		console.log('*** setup ssh-config.js "path" to upload to your server ***')
 	}
 	if (!username) {
 		console.log('*** enter your username with "gulp prod -u username" ***')
 	}
-	return username && typeof username === 'string' && config.path
+	return username && typeof username === 'string' && filepath
 }
