@@ -11,10 +11,12 @@
   "homepage": "https://github.com/enatario/skapa",
   "dependencies": {
     "gulp": "3.9.0",
+    "gulp-template": "^5.0.0",
     "gulp-yarn": "0.0.4",
     "inquirer": "^3.0.6",
     "run-sequence": "1.1.1",
     "shelljs": "^0.7.7"
   },
-  "engine": "node 5.1.1"
+  "engine": "node 5.1.1",
+  "devDependencies": {}
 }

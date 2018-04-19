@@ -9,7 +9,8 @@ const plumber = require('gulp-plumber')
 const report = require('./report-error.js')
 const sassLint = require('gulp-sass-lint')
 
-const srcCSS = 'src/css/config.scss'
+const srcCSS = 'src/css/config.scss'<% if(bootstrap === true) { %>
+const bootstrap = `${process.cwd()}/node_modules/bootstrap-sass/assets/stylesheets`<% } %>
 
 // Linter
 gulp.task('css-lint', () => {
@@ -27,7 +28,11 @@ gulp.task('css-dev', ["css-lint"], () => {
 		.pipe(plumber({ errorHandler: report }))
 		.pipe(sass({
 			sourcemaps: true,
-			includePaths: [bourbon, "node_modules"]
+			includePaths: [
+				bourbon,<% if(bootstrap === true) { %>
+				bootstrap,<% } %>
+				"node_modules",
+			]
 		}))
 		.pipe(autoprefixer())
 		.pipe(combineMq())

@@ -1,5 +1,6 @@
 @import "normalize.css/normalize";
-@import "bourbon";
+@import "bourbon";<% if(bootstrap === true) { %>
+@import "bootstrap";<% } %>
 
 // Base
 @import "base/base";
